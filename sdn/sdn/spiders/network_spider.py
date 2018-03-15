@@ -9,3 +9,4 @@ class NetworkSpider(scrapy.Spider):
         filename = 'jiagou.html'
         with open(filename, 'wb') as f:
             f.write(response.body)
+

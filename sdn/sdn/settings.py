@@ -50,7 +50,7 @@ NEWSPIDER_MODULE = 'sdn.spiders'
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'sdn.middlewares.MyCustomDownloaderMiddleware': 543,
+    'sdn.middlewares.GuandianDownloaderMiddleware': 543,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
 }
 
