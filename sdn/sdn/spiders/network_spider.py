@@ -1,4 +1,5 @@
 import scrapy
+from sdn.items import NetItem
 
 class NetworkSpider(scrapy.Spider):
     name = "network"
@@ -6,7 +7,12 @@ class NetworkSpider(scrapy.Spider):
         "http://www.sdnlab.com/"
     ]
     def parse(self, response):
-        filename = 'jiagou.html'
-        with open(filename, 'wb') as f:
-            f.write(response.body)
+        for sel in response.xpath(".//div[@id='artcontent']"):
+            item = NetItem()
+            title = sel.xpath(".//div/div/div/a[@title]/text()").extract()
+            for t in title[0]['title']:
+                print t
+
+            yield item
+
 

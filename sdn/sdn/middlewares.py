@@ -9,11 +9,10 @@ class GuandianDownloaderMiddleware(object):
             try:
                 driver.get(request.url)
                 driver.implicitly_wait(3)
-
                 guandian = ".//div[@class='title-content']/a[3]"
                 getmore = "//input[@id='btn-more']"
                 driver.find_element_by_xpath(guandian).click()
-                for i in range(5):
+                for i in range(1):
                     driver.find_element_by_xpath(getmore).click()
                     time.sleep(5)
                 true_page = driver.page_source

@@ -8,10 +8,12 @@
 import scrapy
 
 
-class DmozItem(scrapy.Item):
+class NetItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     title = scrapy.Field()
-    link = scrapy.Field()
-    desc = scrapy.Field()
+    #imgUrl = scrapy.Field()
+    #author = scrapy.Field()
+    #date = scrapy.Field()
+    #count = scrapy.Field()
 
